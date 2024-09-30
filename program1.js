@@ -3,10 +3,8 @@
  * @return {boolean}
  */
 var isValid = function(s) {
-     
     const stack = [];
-    const bracketMap = { '(': ')', '{': '}', '[': ']' };
-
+    const bracketMap = {'(': ')', '{': '}', '[': ']'};
     for (const char of s) {
         if (bracketMap[char]) {
             stack.push(bracketMap[char]);
@@ -16,10 +14,6 @@ var isValid = function(s) {
             }
         }
     }
-
     return stack.length === 0;
-
 }
 module.exports = { isValid };
-
-
